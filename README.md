@@ -1,0 +1,1 @@
+This project's aim is to create a "to do" app
