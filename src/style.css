@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@300&display=swap');
+
+:root{
+    --dark-blue: rgb(0, 0, 78);
+    --light-blue: rgb(82, 82, 150);
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    row-gap: 1rem;
+}
+
+#container{
+    height: 100vh;
+}
+
+/*Header*/
+.header{
+    background-color: var(--dark-blue);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 6rem;
+    padding: 0 1em 0 3em;
+    box-shadow: 0px 1px 5px var(--dark-blue);
+}
+
+.header > span {
+    font-size: 2rem;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.header > div {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3rem; 
+    font-family: 'Fjalla One', sans-serif;   
+}
+
+.header button {
+    font-size: 1.3rem;
+    font-family: 'Fjalla One', sans-serif;
+    background-color: var(--dark-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/*Menu*/
+.menu{
+    height: calc(100% - 6rem);
+    width: 15rem;
+    background-color: var(--light-blue);
+    display: grid;
+}
+
+.menu ul{
+    margin: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    display: grid;
+    grid-auto-rows: max-content;
+    row-gap: 1.3rem;
+    justify-self: center;
+    padding-top: 3rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+ul li{
+    cursor: pointer;
+}
+
+#today::before{
+    content: url(./imgs/today.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1rem;
+}
+
+#week::before{
+    content: url(./imgs/week.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1rem;
+}
+
+#month::before{
+    content: url(./imgs/month.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1rem;
+}
+
+#anytime::before{
+    content: url(./imgs/anytime.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1rem;
+}
+
+#classes::before{
+    content: url(./imgs/down.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 1rem;
+}
