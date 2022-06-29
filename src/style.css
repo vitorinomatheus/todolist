@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@300&display=swap');
 
+@keyframes classShow{
+    from {position: relative; top: -25%}
+    to {position: relative; top: 0%}
+}
+
+@keyframes classHide{
+    from{position: relative; top: 0%}
+    to {position: relative; top: -25%}
+}
+
 :root{
     --dark-blue: rgb(0, 0, 78);
     --light-blue: rgb(82, 82, 150);
@@ -57,6 +67,7 @@ body{
     width: 15rem;
     background-color: var(--light-blue);
     display: grid;
+    grid-template-rows: max-content max-content;
 }
 
 .menu ul{
@@ -68,13 +79,17 @@ body{
     grid-auto-rows: max-content;
     row-gap: 1.3rem;
     justify-self: center;
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     padding-left: 0;
     list-style: none;
 }
 
 ul li{
     cursor: pointer;
+}
+
+ul li:hover{
+    color: rgb(211, 211, 211)
 }
 
 #today::before{
@@ -110,4 +125,60 @@ ul li{
     display: inline-block;
     vertical-align: middle;
     padding-right: 1rem;
+}
+
+.menu > div {
+    color: rgb(221, 221, 221);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    justify-self: center;
+    margin-top: 1.2rem;
+    display: none
+}
+
+.menu > div.show{
+    display: grid;
+    grid-auto-rows: max-content;
+    row-gap: 1rem;
+    animation-name: classShow;
+    animation-duration: 0.2s;
+}
+
+.menu > div.show a{
+    cursor: pointer;
+}
+
+#Personal::before{
+    content: url(./imgs/personal.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 0.5rem;
+}
+
+#Work::before{
+    content: url(./imgs/work.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 0.5rem;
+}
+
+#Studies::before{
+    content: url(./imgs/study.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 0.5rem;
+}
+
+#Shopping::before{
+    content: url(./imgs/shopping.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 0.5rem;
+}
+
+#Other::before{
+    content: url(./imgs/other.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 0.5rem;
 }
